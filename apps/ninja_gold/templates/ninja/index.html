@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <title>Document</title>
 </head>
 <body>
@@ -38,12 +40,14 @@
     </div>
     </form>
 
-    <div class="col-xs-12">
-
+  </div>
+  <div class="row col-md-12">
+    <h2>Activites </h2>
+    <div id="activity">  
+    {% for activity in activites %}
+      <p>{{activity}}</p>
+    {% endfor %}
     </div>
-
-
-
   </div>
 
   </div>

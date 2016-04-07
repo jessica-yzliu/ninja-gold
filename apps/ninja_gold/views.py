@@ -7,7 +7,8 @@ from apps.ninja_gold.models import Wallet, Form
 def index(request):
     wallet = Wallet(request)
     context = {
-        'total': wallet.total_gold
+        'total': wallet.total_gold,
+        'activites': wallet.activites
     }
     return render(request, 'ninja/index.html', context)
 
