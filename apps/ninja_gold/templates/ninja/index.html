@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Ninja Gold</h1>
+  <h2>Your Gold: </h2><input type="number" name="total-gold" value="{{total}}">
+
+  <div class="row col-md-12">
+    <form action="{% url 'ninja-gold' %}" method="POST">
+      {% csrf_token %}
+    <div class="col-md-3">
+      <h2>Farm</h2>
+      <p>earns 10-20 golds</p>
+      <button type="submit" name="ninja" value="farm">Find Gold</button>
+    </div>
+
+    <div class="col-md-3">
+      <h2>Cave</h2>
+      <p>earns 5-10 golds</p>
+      <button type="submit" name="ninja" value="cave">Find Gold</button>
+    </div>
+
+    <div class="col-md-3">
+      <h2>House</h2>
+      <p>earns 2-5 golds</p>
+      <button type="submit" name="ninja" value="house">Find Gold</button>
+    </div>
+
+    <div class="col-md-3">
+      <h2>Casino</h2>
+      <p>earns/takes 0-50 golds</p>
+      <button type="submit" name="ninja" value="casino">Find Gold</button>
+    </div>
+    </form>
+
+    <div class="col-xs-12">
+
+    </div>
+
+
+
+  </div>
+
+  </div>
+
+</body>
+</html>
