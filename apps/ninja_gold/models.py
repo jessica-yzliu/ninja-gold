@@ -19,28 +19,28 @@ class Wallet():
     def find_gold_in_farm(self):
         random_gold = random.randrange(10, 20)
         self.total_gold += random_gold
-        self.activites.append("Earned " + str(random_gold) + " from the farm.")
+        self.activites.append({'text': "Earned " + str(random_gold) + " from the farm.", 'isPositive': True})
         self.save_in_session()
 
     def find_gold_in_cave(self):
         random_gold = random.randrange(5, 10)
         self.total_gold += random_gold
-        self.activites.append("Earned " + str(random_gold) + " from the cave.")
+        self.activites.append({'text': "Earned " + str(random_gold) + " from the cave.", 'isPositive': True})
         self.save_in_session()
 
     def find_gold_in_house(self):
         random_gold = random.randrange(2, 5)
         self.total_gold += random_gold
-        self.activites.append("Earned " + str(random_gold) + " from the house.")
+        self.activites.append({'text': "Earned " + str(random_gold) + " from the house.", 'isPositive': True})
         self.save_in_session()
 
     def find_gold_in_casino(self):
         random_gold = int(random.uniform(-50, 50))
         self.total_gold += random_gold
         if random_gold > 0:
-            self.activites.append("Earned " + str(random_gold) + " from the casino.")
+            self.activites.append({'text': "Earned " + str(random_gold) + " from the casino.", 'isPositive': True})
         else:
-            self.activites.append("Lost " + str(random_gold) + " from the casino.")
+            self.activites.append({'text': "Lost " + str(random_gold) + " from the casino.", 'isPositive': False})
         self.save_in_session()
 
     def save_in_session(self):

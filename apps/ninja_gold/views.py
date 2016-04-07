@@ -5,6 +5,7 @@ from apps.ninja_gold.models import Wallet, Form
 # Create your views here.
 
 def index(request):
+    # del request.session["activites"]
     wallet = Wallet(request)
     context = {
         'total': wallet.total_gold,

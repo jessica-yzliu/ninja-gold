@@ -43,9 +43,10 @@
   </div>
   <div class="row col-md-12">
     <h2>Activites </h2>
-    <div id="activity">  
+    <div id="activity">
     {% for activity in activites %}
-      <p>{{activity}}</p>
+      <!-- <p>{{activity.text}}</p> -->
+      <p class="{% if activity.isPositive %} positive-activity {% else %} negative-activity {% endif %}">{{activity.text}}</p>
     {% endfor %}
     </div>
   </div>
